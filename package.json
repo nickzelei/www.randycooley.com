@@ -1,0 +1,10 @@
+{
+  "name": "RandyBase",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "*",
+    "express": "^5.0.0-alpha.1",
+    "method-override": "*",
+    "mongoose": "^4.0.0-rc2"
+  }
+}
