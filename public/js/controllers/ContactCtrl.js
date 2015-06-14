@@ -1,4 +1,4 @@
-angular.module('ContactCtrl', []).controller('ContactController', function($scope) {
+app.controller('ContactController', ['$scope', function($scope) {
   $scope.tagline = 'This is the contact page.';
 
   $scope.contact = {};
@@ -6,12 +6,11 @@ angular.module('ContactCtrl', []).controller('ContactController', function($scop
   $scope.send = function(isValid) {
   	//Send data
 
-  	if (typeof $scope.contact.anti !== "undefined" && $scope.contact.anti !== null && $scope.contact.anti.length > 0)
-  		return false;
+    if (!$scope.contact.anti)
+      return  false;
 
   	if (isValid) {
   		alert('the form is valid!');
   	}
   };
-
-});
+}]);

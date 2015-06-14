@@ -1,3 +1,3 @@
-angular.module('AboutCtrl', []).controller('AboutController', function($scope) {
+app.controller('AboutController',['$scope', function($scope) {
   $scope.tagline = 'This is the about page.';
-})
+}]);
