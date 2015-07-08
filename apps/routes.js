@@ -28,18 +28,11 @@ module.exports = function(app) {
   app.get('/api/projects/:id', function(req, res) {
       var projectId = req.params.id;
       console.log(projectId);
-      ProjectMeta.find({"_id": mongoose.Types.ObjectId(projectId)}, function(err, test) {
-        res.json(test);
+      ProjectMeta.find({"_id": mongoose.Types.ObjectId(projectId)}, function(err, data) {
+        console.log(data);
+        res.json(data);
       })
   });
-
-  //app.get('/api/nerds', function(req, res) {
-  //  Nerd.find(function(err, nerds) {
-//      if (err) {res.send(err);}
-
-      //res.json(nerds);
-    //});
-  //});
 
   //catch all to handle angular routes
   app.get('*', function(req, res) {

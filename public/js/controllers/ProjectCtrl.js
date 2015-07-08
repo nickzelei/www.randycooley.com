@@ -1,26 +1,17 @@
-app.controller('ProjectController', ['$scope', 'ProjectService', function($scope, ProjectService) {
-  $scope.tagline = 'This is the project page.';
+app.controller('ProjectController', ['$scope', 'ProjectService', '$routeParams', function($scope, ProjectService, $routeParams) {
   $scope.title = 'Projects';
   
-  var projects = [];
+  var projectId = $routeParams.param1 || false;
+
   ProjectService.get(function(data) {
     console.log(data);
-    projects.push(data[0]);
-    $scope.projects = projects;
-
-      var project2 = {
-    id: 2,
-    title: 'Project Two',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.',
-    image: 'http://placehold.it/700x300',
-    imagealt: 'Project Two',
-    url: '/projects/2',
-    createdDate: ''
-  };
-  
-  //projects.push(project1);
-  projects.push(project2);
-  });  
+    data = data || {};
+    $scope.projects = data;
+    
+    if (data.length === 1) {
+      $scope.project = data[0];
+    }
+  }, projectId);  
  
   
 
