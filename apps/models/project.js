@@ -4,9 +4,12 @@ var Schema = mongoose.Schema;
 var projectSchema = new Schema({
     title: { type: String, required: true },
     description: String,
-    image: { type: String, required: true },
-    imagealt: String,
-    url: { type: String, required: true },
+    images: [
+        {
+            image: String,
+            imagealt: String
+        }
+    ],
     createdDate: { type: Date, required: true },
     updatedDate: { type: Date, required: true}
 });

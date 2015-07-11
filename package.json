@@ -1,10 +1,19 @@
 {
-  "name": "RandyBase",
+  "name": "randybase",
   "main": "server.js",
   "dependencies": {
+    "angular-bootstrap-lightbox": "^0.6.1",
     "body-parser": "*",
     "express": "*",
     "method-override": "*",
     "mongoose": "*"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
