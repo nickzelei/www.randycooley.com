@@ -7,7 +7,7 @@ var projectSchema = new Schema({
     images: [
         {
             image: String,
-            imagealt: String
+            caption: String
         }
     ],
     createdDate: { type: Date, required: true },
