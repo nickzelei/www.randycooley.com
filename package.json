@@ -6,13 +6,14 @@
     "body-parser": "*",
     "express": "*",
     "method-override": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "nodemailer": "^1.4.0"
   },
   "scripts": {
     "start": "node server.js"
   },
   "engines": {
-	"node": "0.12.x"  
+    "node": "0.12.x"
   },
   "version": "1.0.0",
   "devDependencies": {},
