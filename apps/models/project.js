@@ -4,9 +4,13 @@ var Schema = mongoose.Schema;
 var projectSchema = new Schema({
     title: { type: String, required: true },
     description: String,
-    images: [
+    mainImage: {
+        url: String,
+        caption: String
+    },
+    addImages: [
         {
-            image: String,
+            url: String,
             caption: String
         }
     ],

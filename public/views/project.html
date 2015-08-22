@@ -2,7 +2,7 @@
     <div class="row">    
         <div class="col-md-8" style="width:auto;">
             <div class="item active">
-                <img class="img-responsive" src="http://placehold.it/569x427" alt="">
+                <img class="img-responsive projImg" ng-src={{project.mainImage.url}} alt="{{project.mainImage.caption}}">
             </div>
         </div>
     
@@ -23,37 +23,12 @@
         <div class="col-lg-12">
             <hr>
         </div>
-        
-        <div class="col-sm-3 col-xs-6" ng-repeat="image in project.images">
-            <a ng-click="">
-                <img ng-src="{{image.url}}" class="img-thumbnail">
-            </a>
-        </div>
-        
-        
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/427x569" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a ng-click="openLightboxModal(0)">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
-        </div>
-
-        <div class="col-sm-3 col-xs-6">
-            <a href="#">
-                <img class="img-responsive img-hover img-related" src="http://placehold.it/500x300" alt="">
-            </a>
+        <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-3 col-xs-6 addImgs" ng-repeat="image in project.addImages">
+                <a ng-click="openLightboxModal($index)">
+                    <img ng-src={{image.url}} alt="{{image.caption}}" class="img-thumbnail projImg">
+                </a>
+            </div>
         </div>
     </div>
-    
 </div>

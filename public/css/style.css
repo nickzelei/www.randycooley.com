@@ -23,23 +23,12 @@ body {
     opacity: 0.8;
 }
 
-/* Home Page Carousel */
-
-header.carousel {
-    height: 50%;
+.projImg {
+    cursor: pointer;
 }
 
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
-}
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+.addImgs {
+    padding-bottom: 10px;
 }
 
 /* 404 Page Styles */

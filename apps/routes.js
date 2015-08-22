@@ -10,13 +10,13 @@ module.exports = function(app) {
   });
 
   app.get('/api/contactus', function(req, res) {
-      Emailer.sendMail(function(error, greatSuccess) {
-        if (error) {
-          //console.log(error);
-        }
-
-        res.json({ success: greatSuccess });
-      });
+//       Emailer.sendMail(function(error, greatSuccess) {
+//         if (error) {
+//           //console.log(error);
+//         }
+// 
+//         res.json({ success: greatSuccess });
+//       });
   });
 
   app.get('/api/projects', function(req, res) {
@@ -33,6 +33,26 @@ module.exports = function(app) {
         res.json(data);
       })
   });
+  
+  // app.post('/api/projects/add', function(req, res) {
+  //   var request = req.body;
+  //   request.createdDate = new Date();
+  //   request.updatedDate = new Date();
+  //   //console.log(request);
+  //   var project = new ProjectMeta(request);
+  //   //console.log(project);
+  //   var message = "failed";
+  //   
+  //   project.save(function(err) {
+  //     if (err) {
+  //       console.log(err); 
+  //     }
+  //     
+  //     message = "success";
+  //     console.log(message);
+  //     res.json(message);
+  //   });    
+  // });
 
   //catch all to handle angular routes
   app.get('*', function(req, res) {
