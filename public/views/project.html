@@ -24,9 +24,9 @@
             <hr>
         </div>
         <div class="col-sm-12 col-xs-12">
-            <div class="col-sm-3 col-xs-6 addImgs" ng-repeat="image in project.addImages">
-                <a ng-click="openLightboxModal($index)">
-                    <img ng-src={{image.url}} alt="{{image.caption}}" class="img-thumbnail projImg">
+            <div deckgrid class="addImgs deckgrid" source="project.addImages">
+                <a ng-click="mother.openLightboxModal(card.$index)">
+                    <img ng-src={{card.url}} alt="{{card.caption}}" class="img-thumbnail projImg">
                 </a>
             </div>
         </div>

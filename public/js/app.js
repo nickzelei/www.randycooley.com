@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'bootstrapLightbox', 'ProjectFactory']);
+var app = angular.module('MyApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'bootstrapLightbox', 'akoenig.deckgrid', 'ProjectFactory']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
