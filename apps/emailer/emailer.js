@@ -3,7 +3,7 @@
 var nodemailer = require('nodemailer');
 
 module.exports = {
-	sendMail: function(callback) {
+	sendMail: function(data, callback) {
 		var transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
@@ -11,12 +11,18 @@ module.exports = {
 		        pass: 'qgoflljyzovsecrt'
 	    }
 		});
+		
+		var subject = "New Inquiry from: " + data.name;
+		var text = "Name: " + data.name + "<br><br>" +
+					"Phone: " + data.phone + "<br><br>" + 
+					"Email: " + data.email + "<br><br>" + 
+					"Message: " + data.message;
 
 		var message = {
 			from: 'nickzelei@gmail.com',
 			to: 'nickzelei@gmail.com',
-			subject: 'This is a test email',
-			text: 'Hello world!'
+			subject: subject,
+			html: text
 		};
 
 		transporter.sendMail(message, function(error, info) {

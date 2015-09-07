@@ -9,14 +9,21 @@ module.exports = function(app) {
       res.json({ message: 'Youve reached the API!'});
   });
 
-  app.get('/api/contactus', function(req, res) {
-//       Emailer.sendMail(function(error, greatSuccess) {
-//         if (error) {
-//           //console.log(error);
-//         }
-// 
-//         res.json({ success: greatSuccess });
-//       });
+  app.post('/api/contactus', function(req, res) {
+      var data = req.body || false;
+      data.lvblnk = data.lvblnk || false;
+      if (data && !data.lvblnk) {
+        Emailer.sendMail(data, function(error, greatSuccess) {
+          if (error) {
+            //console.log(error);
+          }
+          res.json({ success: greatSuccess });
+        });
+      }
+      else {
+        //let spammers think it was a success
+        res.json({ success: true });
+      }
   });
 
   app.get('/api/projects', function(req, res) {

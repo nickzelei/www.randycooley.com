@@ -49,19 +49,35 @@ app.controller('ProjectController', ['$scope', 'ProjectService', '$routeParams',
 }]);
 
 ////////////////Contact/////////////////////
-app.controller('ContactController', ['$scope', function($scope) {
+app.controller('ContactController', ['$scope', '$http', function($scope, $http) {
   $scope.tagline = 'This is the contact page.';
 
   $scope.contact = {};
 
   $scope.send = function(isValid) {
   	//Send data
-
-    if (!$scope.contact.anti)
+    var anti = $scope.contact.anti || false;
+    if (anti)
       return  false;
-
+    
   	if (isValid) {
-  		alert('the form is valid!');
+      var phone = $scope.contact.phone || "";
+      var lvblnk = $scope.contact.anti || "";
+      var data = {
+        "name": $scope.contact.name,
+        "phone": phone,
+        "email": $scope.contact.email,
+        "message": $scope.contact.message,
+        "lvblnk": lvblnk        
+      }
+//   		$http.post('/api/contactus/', data).then(function(res) {
+//         $scope.contact.name = "";
+//         $scope.contact.phone = "";
+//         $scope.contact.email = "";
+//         $scope.contact.message = "";
+//         $scope.contactForm.$setPristine();
+// 
+//       });
   	}
   };
 }]);
