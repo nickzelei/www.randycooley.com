@@ -44,6 +44,11 @@ app.controller('ProjectController', ['$scope', 'ProjectService', '$routeParams',
     
     if (data.length === 1) {
       $scope.project = data[0];
+    } else {
+        for (var i = 0; i < $scope.projects.length; i++) {
+            if ($scope.projects[i].description.length > 150)
+            $scope.projects[i].description = $scope.projects[i].description.substring(0, 150) + "..."
+        }
     }
   }, projectId);  
 }]);

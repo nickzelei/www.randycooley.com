@@ -14,8 +14,22 @@ body {
     color: white;
 }
 
+.tagline-divider {
+    margin: 15px auto 3px;
+    border-color: #999999;
+}
+
 .img-portfolio {
     margin-bottom: 30px;
+}
+
+.img-responsive {
+    display: block;
+    margin: auto;
+}
+
+.item .img-responsive {
+    cursor: default;
 }
 
 .img-hover:hover {
