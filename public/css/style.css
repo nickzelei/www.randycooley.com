@@ -32,10 +32,9 @@ body {
 
 }
 .carouselImg {
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;   
-    max-height: 300px 
+    margin: 0 auto;
+    max-height: 300px;
+
 }
 
 p.contactText {
@@ -104,6 +103,7 @@ footer {
     .img-related {
         margin-bottom: 30px;
     }
+
 }
 
 @media(max-width:767px) {
@@ -115,12 +115,6 @@ footer {
         height: 70%;
     }
 
-    /*.carousel-inner-inner {
-
-    }
-    .carouselImg {
-        max-height: 300px;
-    }*/
 }
 
 .deckgrid[deckgrid]::before {
