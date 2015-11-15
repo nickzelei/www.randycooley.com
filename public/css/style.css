@@ -38,6 +38,9 @@ body {
     max-height: 300px 
 }
 
+p.contactText {
+    font-size: 17px;
+}
 .img-portfolio {
     margin-bottom: 30px;
 }
