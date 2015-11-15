@@ -16,7 +16,7 @@ app.controller('MainController', ['$scope', 'ProjectService', function($scope, P
     }
   }, projectId);
   
-  $scope.slideInterval = 4000;  
+  $scope.slideInterval = 4500;  
   
   function buildSlide(image, caption) {
     var slide = {

@@ -6,8 +6,8 @@
         <div class="col-md-12">
             <header id="hdrCarousel" class="carousel slide">
                 <carousel interval="slideInterval" class="carousel-inner">
-                    <slide ng-repeat="slide in slides" active="slide.active">
-                        <img ng-src="{{slide.image}}" style="margin:0 auto; height: 500px; max-height: 500px">
+                    <slide ng-repeat="slide in slides" active="slide.active" class="carousel-inner-inner">
+                        <img class="carouselImg" ng-src="{{slide.image}}">
                         <div class="carousel-caption">
                             <p>{{slide.caption}}</p>
                         </div>
