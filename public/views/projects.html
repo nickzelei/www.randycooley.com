@@ -8,7 +8,7 @@
     <!-- /.row -->
     
     <!-- Projects -->
-    <div class="projs" ng-repeat="project in projects | orderBy: 'title' : true">
+    <div class="projs" ng-repeat="project in projects | orderBy: 'sortOrder' : true">
         <hr>
         <project-meta project="project"></project-meta>        
     </div>
