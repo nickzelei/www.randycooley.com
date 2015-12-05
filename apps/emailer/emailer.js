@@ -20,7 +20,7 @@ module.exports = {
 
 		var message = {
 			from: 'nickzelei@gmail.com',
-			to: 'contact@randycooley.com',
+			to: 'nickzelei@gmail.com',
 			subject: subject,
 			html: text
 		};
