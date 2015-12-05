@@ -41,25 +41,25 @@ module.exports = function(app) {
       })
   });
   
-  // app.post('/api/projects/add', function(req, res) {
-  //   var request = req.body;
-  //   request.createdDate = new Date();
-  //   request.updatedDate = new Date();
-  //   //console.log(request);
-  //   var project = new ProjectMeta(request);
-  //   //console.log(project);
-  //   var message = "failed";
-  //   
-  //   project.save(function(err) {
-  //     if (err) {
-  //       console.log(err); 
-  //     }
-  //     
-  //     message = "success";
-  //     console.log(message);
-  //     res.json(message);
-  //   });    
-  // });
+   // app.post('/api/projects/add', function(req, res) {
+     // var request = req.body;
+     // request.createdDate = new Date();
+     // request.updatedDate = new Date();
+     // //console.log(request);
+     // var project = new ProjectMeta(request);
+     // //console.log(project);
+     // var message = "failed";
+     
+     // project.save(function(err) {
+       // if (err) {
+         // console.log(err); 
+       // }
+       
+       // message = "success";
+       // console.log(message);
+       // res.json(message);
+     // });    
+   // });
 
   //catch all to handle angular routes
   app.get('*', function(req, res) {

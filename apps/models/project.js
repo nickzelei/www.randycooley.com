@@ -2,7 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var projectSchema = new Schema({
-    title: { type: String, required: true },
+    title: { type: String },
+	projDate: { type: String, required: true },
+	sortOrder: { type: Number },
+	isEnabled: { type: Boolean },
     description: String,
     mainImage: {
         url: String,

@@ -9,6 +9,7 @@ app.controller('MainController', ['$scope', 'ProjectService', function($scope, P
     var slides = $scope.slides = [];
     
     if (data) {
+      data = data.filter(enabledFilter);
       data.sort(function(a,b){ return new Date(b.createdDate) - new Date(a.createdDate); });
       angular.forEach(data, function(value, key) {
         slides.push(buildSlide(value.mainImage.url, value.mainImage.caption));
@@ -40,6 +41,7 @@ app.controller('ProjectController', ['$scope', 'ProjectService', '$routeParams',
   ProjectService.get(function(data) {
     console.log(data);
     data = data || {};
+    data = data.filter(enabledFilter);
     $scope.projects = data;
     
     if (data.length === 1) {
@@ -91,3 +93,7 @@ app.controller('ContactController', ['$scope', '$http', function($scope, $http) 
 app.controller('AboutController', ['$scope', function($scope) {
   $scope.tagline = 'This is the about page.';
 }]);
+
+function enabledFilter(value) {
+    return value.isEnabled;
+}
