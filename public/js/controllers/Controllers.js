@@ -77,14 +77,14 @@ app.controller('ContactController', ['$scope', '$http', function($scope, $http) 
         "message": $scope.contact.message,
         "lvblnk": lvblnk        
       }
-//   		$http.post('/api/contactus/', data).then(function(res) {
-//         $scope.contact.name = "";
-//         $scope.contact.phone = "";
-//         $scope.contact.email = "";
-//         $scope.contact.message = "";
-//         $scope.contactForm.$setPristine();
-// 
-//       });
+   		$http.post('/api/contactus/', data).then(function(res) {
+         $scope.contact.name = "";
+         $scope.contact.phone = "";
+         $scope.contact.email = "";
+         $scope.contact.message = "";
+         $scope.contactForm.$setPristine();
+ 
+       });
   	}
   };
 }]);

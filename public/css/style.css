@@ -25,12 +25,13 @@ body {
 }
 
 .nolinkstyle {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
-.nolinkstyle:hover {
-    color: black;
+.nolinkstyle:hover, .nolinkstyle:focus, .nolinkstyle:visited {
+    color: inherit;
+    text-decoration: none;
 }
 /*.carousel img {
   position: absolute;
