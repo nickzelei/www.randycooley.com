@@ -135,6 +135,10 @@ footer {
         height: 70%;
     }
 
+    h3.brand-name {
+        margin: 0;
+        font-size: 2em;
+    }
 }
 
 .deckgrid[deckgrid]::before {
