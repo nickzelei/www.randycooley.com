@@ -283,7 +283,7 @@ footer p {
         font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 5em;
         font-weight: 700;
-        line-height: normal;
+        line-height: 110%;
         color: #fff;
     }
 
