@@ -34,9 +34,9 @@ module.exports = function(app) {
 
   app.get('/api/projects/:id', function(req, res) {
       var projectId = req.params.id;
-      console.log(projectId);
+      //console.log(projectId);
       ProjectMeta.find({"_id": mongoose.Types.ObjectId(projectId)}, function(err, data) {
-        console.log(data);
+        //console.log(data);
         res.json(data);
       })
   });
