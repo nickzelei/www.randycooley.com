@@ -139,6 +139,10 @@ footer {
         margin: 0;
         font-size: 2em;
     }
+    
+    .arrowdiv {
+        padding-right: 30px;
+    }
 }
 
 .deckgrid[deckgrid]::before {
@@ -273,7 +277,7 @@ footer p {
     padding: 50px 0;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) {    
     .brand {
         display: inherit;
         margin: 0;
