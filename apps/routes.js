@@ -1,7 +1,9 @@
-var ProjectMeta = require('./models/project');
-var path = require('path');
-var Emailer = require('./emailer/emailer');
-var mongoose = require('mongoose');
+'use strict';
+/* global __dirname */
+const ProjectMeta = require('./models/project');
+const path = require('path');
+const Emailer = require('./emailer/emailer');
+const mongoose = require('mongoose');
 
 
 module.exports = function(app) {
@@ -10,7 +12,7 @@ module.exports = function(app) {
   });
 
   app.post('/api/contactus', function(req, res) {
-      var data = req.body || false;
+      let data = req.body || false;
       data.lvblnk = data.lvblnk || false;
       if (data && !data.lvblnk) {
         Emailer.sendMail(data, function(error, greatSuccess) {
@@ -33,7 +35,7 @@ module.exports = function(app) {
   });
 
   app.get('/api/projects/:id', function(req, res) {
-      var projectId = req.params.id;
+      let projectId = req.params.id;
       //console.log(projectId);
       ProjectMeta.find({"_id": mongoose.Types.ObjectId(projectId)}, function(err, data) {
         //console.log(data);

@@ -1,7 +1,8 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+'use strict';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var projectSchema = new Schema({
+let projectSchema = new Schema({
     title: { type: String },
 	projDate: { type: String, required: true },
 	sortOrder: { type: Number },
@@ -22,7 +23,7 @@ var projectSchema = new Schema({
 });
 
 projectSchema.pre('save', function(next) {
-	var currentDate = new Date();
+	let currentDate = new Date();
 	
 	this.updateDate = currentDate;
 
@@ -32,6 +33,6 @@ projectSchema.pre('save', function(next) {
 	next();
 });
 
-var Project = mongoose.model('Project', projectSchema);
+let Project = mongoose.model('Project', projectSchema);
 
 module.exports = Project;

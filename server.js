@@ -1,12 +1,15 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+'use strict';
+/* global process */
+/* global __dirname */
 
-var db = require('./config/db');
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
-var port = process.env.PORT || 8081;
+const db = require('./config/db');
+const port = process.env.PORT || 8081;
 
 mongoose.connect(db.url);
 
@@ -20,12 +23,9 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname + '/public'));
 
-var router = express.Router();
+const router = express.Router();
 
 require('./apps/routes')(app);
-
-
-
 
 app.listen(port);
 

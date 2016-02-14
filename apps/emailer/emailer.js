@@ -1,10 +1,10 @@
 'use strict';
 
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 module.exports = {
 	sendMail: function(data, callback) {
-		var transporter = nodemailer.createTransport({
+		const transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
 		        user: 'nickzelei@gmail.com',
@@ -12,13 +12,13 @@ module.exports = {
 	    }
 		});
 		
-		var subject = "New Inquiry from: " + data.name;
-		var text = "Name: " + data.name + "<br><br>" +
+		let subject = "New Inquiry from: " + data.name;
+		let text = "Name: " + data.name + "<br><br>" +
 					"Phone: " + data.phone + "<br><br>" + 
 					"Email: " + data.email + "<br><br>" + 
 					"Message: " + data.message;
 
-		var message = {
+		let message = {
 			from: 'nickzelei@gmail.com',
 			to: 'nickzelei@gmail.com',
 			subject: subject,
