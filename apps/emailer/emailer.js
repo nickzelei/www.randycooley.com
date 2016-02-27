@@ -19,7 +19,7 @@ module.exports = {
 		        pass: emailConfig.passwordToken
 	    }
 		});
-		
+		console.log(emailConfig);
 		let subject = "New Inquiry from: " + data.name;
 		let text = "Name: " + data.name + "<br><br>" +
 					"Phone: " + data.phone + "<br><br>" + 
