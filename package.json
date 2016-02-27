@@ -5,6 +5,7 @@
     "body-parser": "*",
     "express": "*",
     "method-override": "*",
+    "mongo": "^0.1.0",
     "mongoose": "*",
     "nodemailer": "^1.4.0"
   },
@@ -15,7 +16,13 @@
     "node": "*"
   },
   "version": "1.0.0",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7"
+  },
   "author": "",
   "license": "ISC",
   "description": ""
