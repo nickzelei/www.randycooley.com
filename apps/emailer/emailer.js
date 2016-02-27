@@ -2,13 +2,21 @@
 
 const nodemailer = require('nodemailer');
 
+const emailConfig = {
+	'username': process.env.EMAIL_USERNAME,
+	'passwordToken': process.env.EMAIL_PASSWORDTOKEN,
+    'sendTo': process.env.EMAIL_SENDTO
+};
+
 module.exports = {
 	sendMail: function(data, callback) {
 		const transporter = nodemailer.createTransport({
-			service: 'Gmail',
+			host: "smtp.gmail.com",
+            port: 465,
+            secure: true,
 			auth: {
-		        user: 'nickzelei@gmail.com',
-		        pass: 'qgoflljyzovsecrt'
+		        user: emailConfig.username,
+		        pass: emailConfig.passwordToken
 	    }
 		});
 		
@@ -19,8 +27,8 @@ module.exports = {
 					"Message: " + data.message;
 
 		let message = {
-			from: 'nickzelei@gmail.com',
-			to: 'nickzelei@gmail.com',
+			from: emailConfig.username,
+			to: emailConfig.sendTo,
 			subject: subject,
 			html: text
 		};

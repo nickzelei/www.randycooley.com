@@ -4,13 +4,15 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
+    "foreman": "^1.4.1",
     "method-override": "*",
     "mongo": "^0.1.0",
     "mongoose": "*",
-    "nodemailer": "^1.4.0"
+    "nodemailer": "^1.4.0",
+    "nodemon": "^1.9.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nf start"
   },
   "engines": {
     "node": "*"
