@@ -31,6 +31,10 @@ coverage
 #foreman
 .env
 
+.settings
+.vscode
+.git
+
 # node-waf configuration
 .lock-wscript
 
