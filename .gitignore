@@ -24,6 +24,8 @@ coverage
 # node-waf configuration
 .lock-wscript
 
+public/libs
+
 #foreman
 .env
 
