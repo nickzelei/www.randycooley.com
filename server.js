@@ -22,7 +22,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname + '/public'));
 
-const router = express.Router();
+//const router = express.Router();
 
 require('./apps/routes')(app);
 
