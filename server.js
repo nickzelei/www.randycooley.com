@@ -30,4 +30,4 @@ app.listen(port);
 
 console.log('Magic happens on port ' + port);
 
-exports = module.exports = app; 	 	
+exports = module.exports = app;
