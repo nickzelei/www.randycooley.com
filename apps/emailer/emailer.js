@@ -34,22 +34,21 @@ module.exports = {
             replyTo: data.email
         };
 
-		transporter.sendMail(message, function(error, info) {
-			if (error) {
-				console.log('Error occurred');
-				console.log(error);
-				console.log(error.message);
-				if (callback)
-					callback(error.message, false);
-				return;
-			}
+        transporter.sendMail(message, function(error, info) {
+          if (error) {
+            console.log('Error occurred');
+            console.log(error);
+            console.log(error.message);
+            if (callback)
+            callback(error.message, false);
+            return;
+          }
 
-			console.log('Message success!');
-			console.log(info);
-			console.log('Server responded with "%s"', info.response);
+          console.log('Message success!');
+          console.log(info);
+          console.log('Server responded with "%s"', info.response);
 
-			if (callback)
-				callback(null, true);
-		});
+          if (callback) callback(null, true);
+        });
 	}
 };
