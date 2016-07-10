@@ -8,14 +8,14 @@
     "method-override": "*",
     "mongo": "^0.1.0",
     "mongoose": "*",
-    "nodemailer": "^1.4.0",
+    "nodemailer": "^2.*",
     "nodemon": "^1.9.1"
   },
   "scripts": {
     "start": "nf start"
   },
   "engines": {
-    "node": "*"
+    "node": "=6.*"
   },
   "version": "1.0.0",
   "devDependencies": {
@@ -25,7 +25,7 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7"
   },
-  "author": "",
+  "author": "Nick Zelei",
   "license": "ISC",
   "description": ""
 }
