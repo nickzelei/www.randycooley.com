@@ -50,5 +50,5 @@ module.exports = {
 
           if (callback) callback(null, true);
         });
-	}
+      }
 };
