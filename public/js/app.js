@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'bootstrapLightbox', 'akoenig.deckgrid', 'ProjectFactory']);
+var app = angular.module('MyApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'ui.bootstrap', 'bootstrapLightbox', 'akoenig.deckgrid', 'ProjectFactory', 'TestimonialFactory']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
@@ -27,6 +27,11 @@ $routeProvider
     .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactController'
+    })
+
+    .when('/testimonials', {
+        templateUrl: 'views/testimonials.html',
+        controller: 'TestimonialController'
     });
 
 $locationProvider.html5Mode(true);

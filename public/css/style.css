@@ -14,6 +14,11 @@ body {
     color: white;
 }
 
+.testimonials:nth-child(2) > hr  {
+    border: 0;
+    color: white;
+}
+
 .tagline-divider {
     margin: 15px auto 3px;
     border-color: #999999;

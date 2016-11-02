@@ -15,7 +15,7 @@
     "start": "nf start"
   },
   "engines": {
-    "node": "=6.*"
+    "node": "=>6.*"
   },
   "version": "1.0.0",
   "devDependencies": {

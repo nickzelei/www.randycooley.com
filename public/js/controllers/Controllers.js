@@ -55,6 +55,17 @@ app.controller('ProjectController', ['$scope', 'ProjectService', '$routeParams',
   }, projectId);  
 }]);
 
+////////////////Project/////////////////////
+app.controller('TestimonialController', ['$scope', 'TestimonialService', function($scope, TestimonialService) {
+  $scope.title = 'Testimonials';
+
+  TestimonialService.get(function(data) {
+    //console.log(data);
+    data = data || {};
+    $scope.testimonials = data;
+  });  
+}]);
+
 ////////////////Contact/////////////////////
 app.controller('ContactController', ['$scope', '$http', function($scope, $http) {
   $scope.tagline = 'This is the contact page.';
