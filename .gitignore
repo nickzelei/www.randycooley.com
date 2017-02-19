@@ -34,8 +34,9 @@ public/libs
 .env
 
 .settings
-.vscode
-.git
+.vscode/
+.git/
+.idea/
 
 # node-waf configuration
 .lock-wscript
