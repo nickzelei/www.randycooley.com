@@ -1,1 +1,1 @@
-This is the codebase for [https://randycooley.com](Randy Cooley Home Improvements)
+This is the codebase for [Randy Cooley Home Improvements](https://randycooley.com)
