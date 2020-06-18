@@ -4,18 +4,16 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "foreman": "^1.4.1",
     "method-override": "*",
     "mongo": "^0.1.0",
     "mongoose": "*",
-    "nodemailer": "^2.*",
-    "nodemon": "^1.9.1"
+    "nodemailer": "^2.*"
   },
   "scripts": {
-    "start": "nf start"
+    "start": "node server.js"
   },
   "engines": {
-    "node": ">=12.*"
+    "node": "=6.*"
   },
   "version": "1.0.0",
   "devDependencies": {
