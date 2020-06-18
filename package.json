@@ -4,7 +4,7 @@
   "dependencies": {
     "body-parser": "*",
     "express": "*",
-    "foreman": "^1.4.1",
+    "foreman": "^3.0.1",
     "method-override": "*",
     "mongo": "^0.1.0",
     "mongoose": "*",
