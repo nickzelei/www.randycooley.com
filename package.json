@@ -1,29 +1,26 @@
 {
-  "name": "randybase",
-  "main": "server.js",
-  "dependencies": {
-    "body-parser": "*",
-    "express": "*",
-    "method-override": "*",
-    "mongo": "^0.1.0",
-    "mongoose": "*",
-    "nodemailer": "^2.*"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": "=6.*"
-  },
+  "name": "www.randycooley.com",
   "version": "1.0.0",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7"
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "Nick Zelei",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zelein/www.randycooley.com.git"
+  },
+  "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/zelein/www.randycooley.com/issues"
+  },
+  "homepage": "https://github.com/zelein/www.randycooley.com#readme",
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
 }
