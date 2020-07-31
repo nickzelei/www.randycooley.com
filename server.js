@@ -3,26 +3,14 @@
 /* global __dirname */
 
 const express = require('express');
-const app = express();
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
 
+const app = express();
 const port = process.env.PORT || 8081;
 
 mongoose.connect(process.env.DB_URL);
 
-app.use(bodyParser.json());
-
-app.use(bodyParser.json({ type:'application/vnd.api+json'}))
-
-app.use(bodyParser.urlencoded({extended: true}));
-
-app.use(methodOverride('X-HTTP-Method-Override'));
-
 app.use(express.static(__dirname + '/public'));
-
-//const router = express.Router();
 
 require('./apps/routes')(app);
 
