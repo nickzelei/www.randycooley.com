@@ -10,7 +10,7 @@ const ProjectMeta = require('./project-model');
 mongoose.connect(process.env.DB_URL);
 
 const app = express();
-app.use(express.static(__dirname + '../public'));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/api/projects', (_req, res) => {
     ProjectMeta.find(function (_err, data) {
