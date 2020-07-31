@@ -1,21 +1,21 @@
 {
-  "name": "randybase",
-  "main": "server.js",
+  "name": "randycooley.com",
+  "main": "./server",
+  "version": "1.0.0",
+  "author": "Nick Zelei",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.9.26"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "node server.js"
+    "start": "node ./server"
   },
   "engines": {
     "node": "=12.*"
   },
-  "version": "1.0.0",
-  "devDependencies": {},
-  "author": "Nick Zelei",
-  "license": "ISC",
-  "description": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/nickzelei/www.randycooley.com"
