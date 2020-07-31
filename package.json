@@ -16,14 +16,12 @@
     "node": "=6.*"
   },
   "version": "1.0.0",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7"
-  },
+  "devDependencies": {},
   "author": "Nick Zelei",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickzelei/www.randycooley.com.git"
+  }
 }

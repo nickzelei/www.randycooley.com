@@ -1,10 +1,6 @@
 # Logs
 logs
 *.log
-<<<<<<< HEAD
-=======
-npm-debug.log*
->>>>>>> 7e65c1e26eb0b480c1a04530e8f52df950370e28
 
 # Runtime data
 pids
@@ -20,7 +16,6 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-<<<<<<< HEAD
 # node-waf configuration
 .lock-wscript
 
@@ -29,32 +24,12 @@ public/libs
 #foreman
 .env
 
-=======
-#foreman
-.env
-
-.settings
-.vscode/
-.git/
-.idea/
-
-# node-waf configuration
-.lock-wscript
-
->>>>>>> 7e65c1e26eb0b480c1a04530e8f52df950370e28
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directory
-<<<<<<< HEAD
 # https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
 node_modules
-=======
-node_modules
 
-# Optional npm cache directory
-.npm
-
-# Optional REPL history
-.node_repl_history
->>>>>>> 7e65c1e26eb0b480c1a04530e8f52df950370e28
+.next
+.DS_Store
