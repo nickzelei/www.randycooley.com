@@ -5,9 +5,7 @@
     "body-parser": "*",
     "express": "*",
     "method-override": "*",
-    "mongo": "^0.1.0",
-    "mongoose": "*",
-    "nodemailer": "^2.*"
+    "mongoose": "*"
   },
   "scripts": {
     "start": "node server.js"

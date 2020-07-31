@@ -1,4 +1,4 @@
-app.directive('testimonialMeta', function() {
+app.directive('testimonialMeta', function () {
 	return {
 		restrict: 'E',
 		scope: {
@@ -6,7 +6,7 @@ app.directive('testimonialMeta', function() {
 		},
 		replace: true,
 		templateUrl: "views/templates/testimonialMeta.html",
-		controller: function($scope) {
+		controller: function ($scope) {
 		}
 	};
 });

@@ -1,4 +1,4 @@
-app.directive('projectMeta', function() {
+app.directive('projectMeta', function () {
 	return {
 		restrict: 'E',
 		scope: {
@@ -6,7 +6,7 @@ app.directive('projectMeta', function() {
 		},
 		replace: true,
 		templateUrl: "views/templates/projectMeta.html",
-		controller: function($scope) {
+		controller: function ($scope) {
 		}
 	};
 });
