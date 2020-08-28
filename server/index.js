@@ -1,27 +1,24 @@
 'use strict';
 
 const express = require('express');
-const mongoose = require('mongoose');
 const path = require('path');
 const process = require('process');
 
-const ProjectMeta = require('./project-model');
-
-mongoose.connect(process.env.DB_URL);
+const { projectMap, projects } = require('./projects');
 
 const app = express();
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/api/projects', (_req, res) => {
-    ProjectMeta.find(function (_err, data) {
-        res.json(data);
-    })
+    return res.json(projects);
 });
 app.get('/api/projects/:id', (req, res) => {
     const projectId = req.params.id;
-    ProjectMeta.find({ "_id": mongoose.Types.ObjectId(projectId) }, function (_err, data) {
-        res.json(data);
-    });
+    const project = projectMap.get(projectId);
+    if (!project) {
+        return res.sendStatus(404);
+    }
+    return res.json([project]);
 });
 
 //catch all to handle angular routes
