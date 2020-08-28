@@ -3,7 +3,6 @@
   "main": "./server",
   "version": "1.0.0",
   "author": "Nick Zelei",
-  "license": "ISC",
   "description": "",
   "dependencies": {
     "express": "^4.17.1"
